@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&display=swap')
+    
+$orange: #ff8c00
+$green: #7CE04E
+$yellow: #FFF0DE
+$gray: #7a746e
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    min-height: 100vh
+    font-family: 'Inconsolata', monospace
+    position: relative
+    color: black
+    
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6
+    color: black
+    font-weight: 700
+h1
+    font-size: 56px
+    line-height: 56px
+
+h2
+    font-size: 50px
+    line-height: 60px
+
+h3
+    font-size: 26px
+    line-height: 36px    
+
+h4
+    font-size: 33px
+    line-height: 43px    
+
+p
+    font-size: 18px
+    line-height: 26px
+    font-weight: 400
+
+a
+    text-decoration: none
+
+img
+    max-width: 100%
+    display: block
+
+ul
+    list-style: none    
+
+.container
+    width: 1110px
+    margin: 0 auto
+
+.cta
+    font-family: 'Inconsolata', monospace
+    padding: 14px 40px
+    border: 2px solid black    
+    font-size: 18px
+    line-height: 26px
+    font-weight: 700
+    background-color: white
+    color: black
+    &:hover
+        box-shadow: 5px 5px $orange
+        transition: all 0.5s ease
+
+// Header    
+header
+    position: absolute
+    top: 0
+    height: 100px
+    width: 100%    
+    .container
+        margin-top: 50px
+        display: flex
+        justify-items: space-between
+        align-items: center
+    .logo img
+        height: 50px
+.nav-left
+    width: 50%
+.nav-right      
+    width: 50%
+    a
+        float: right
+
+@media screen and (max-width: 1150px)  
+    header 
+        .logo img
+            height: 40px
+        .container
+            margin-top: 30px
+    .container
+        width: 690px
+    
+    h1
+        font-size: 37px
+        line-height: 40px
+
+    h2
+        font-size: 40px         
+        line-height: 40px
+    h3
+        font-size: 18px         
+        line-height: 22px
+
+    p
+        font-size: 16px
+        line-height: 23px        
+
+    .cta
+        padding: 10px 20px
+        font-size: 16px
+        line-height: 20px        
+
+@media screen and (max-width: 720px)  
+    header 
+        .logo img
+            height: 30px
+        .container
+            margin-top: 15px
+    .container
+        width: 343px
+    
+    h1
+        font-size: 34px
+        line-height: 34px
+
+    h2
+        font-size: 36px         
+        line-height: 36px
+    h3
+        font-size: 18px         
+        line-height: 22px
+
+    p
+        font-size: 16px
+        line-height: 23px        
+
+    .cta
+        padding: 10px
+        font-size: 16px
+        line-height: 18px     
+
+// Hero banner section      
+main
+    padding: 110px 0 128px 0       
+
+.hero .container
+    background-image: url('assets/griff-hero.jpg')
+    background-position: right 0 bottom 0
+    background-repeat: no-repeat
+    background-size: 550px 495px
+    padding: 70px 0 110px 0
+    p
+        margin: 30px 0 50px 0
+        max-width: 50ch
+
+.hero-left
+    width: 55%
+    padding-top: 70px
+
+.hero-right        
+    display: none
+
+.gradient-text
+    background-image: linear-gradient(90deg, #7CE04E 0%, #ffb700f8 25%, #6effa3 50%, #ffb700 75%, #d8e266 100%)  
+    -webkit-background-clip: text
+    background-clip: text          
+    color: transparent 
+    background-size: 1000%
+    background-position: -100%
+    animation: animatedText 12s linear infinite
+
+@keyframes animatedText
+    0% 
+        background-position: -150%
+    100% 
+        background-position: 50%
+
+@media screen and (max-width: 1150px)
+    .hero .container
+        background-size: 350px 280px
+        background-position: right 0 bottom 0
+        padding: 30px 0 60px 0
+        p
+            margin: 20px 0 50px 0
+            max-width: 50ch
+
+    .hero-left
+        padding-top: 0
+
+@media screen and (max-width: 720px)  
+    main
+        padding-top: 50px
+    .hero .container
+        background-image: none
+        padding: 0
+        p
+            margin: 20px 0 50px 0
+            width: 100%
+    .hero-right
+        display: block
+        width: 100%
+    .hero-left
+        width: 100%
+        text-align: center
+        margin-bottom: 50px
+
+
+// Services  
+.services 
+    padding: 66px 0 80px 0
+    background-color: $yellow
+    background-image: url('assets/pattern-service.png')
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center center
+    width: 100%
+    .container
+        display: flex
+.service-heading
+    width: 35%
+    margin-right: 80px
+    p
+        margin-top: 20px
+
+.service-container
+    width: 65%
+
+.service
+    background-color: white
+    margin-bottom: 45px  
+    display: flex
+    align-items: center
+    justify-content: left
+    border: 2px solid black    
+    box-shadow: 10px 10px $orange
+    height: 230px
+    img
+        width: 71px
+        height: 71px
+        margin-left: 50px
+    p
+        margin-top: 10px 
+        font-size: 16px
+        line-height: 23px    
+
+.service-content
+    margin: 0 35px 0 50px
+
+
+@media screen and (max-width: 1150px)
+    .services 
+        padding: 50px 0 50px 0
+    .service-heading
+        width: 35%
+        margin-right: 40px
+        p
+            margin-top: 15px
+
+    .service
+        margin-bottom: 30px  
+        height: 220px
+        img
+            width: 40px
+            height: 40px
+            margin-left: 20px
+
+    .service-content
+        margin: 0 20px
+
+@media screen and (max-width: 720px)  
+    .services .container
+        flex-direction: column
+    .service-heading
+        width: 100%
+        margin-right: 0
+        text-align: center
+        p
+            margin-top: 10px
+    .service-container
+        width: 100%
+        margin-top: 30px
+    .service
+        margin-bottom: 30px  
+        padding: 60px 15px 15px 15px
+        height: 270px
+        flex-direction: column
+        align-items: left
+        justify-content: left
+        position: relative
+        img
+            margin: 0 
+            position: absolute
+            top: 15px
+            left: 20px
+    .service-content
+        margin: 10px 0 
+
+// Why NC
+.whync
+    padding: 66px 0 80px 0
+    text-align: center
+
+.whync-heading p
+    margin-top: 20px    
+
+.whync-cards
+    display: flex
+    justify-content: space-between
+    margin-top: 95px
+    text-align: left
+
+.whync-card
+    box-shadow: 10px 10px $green    
+    border: 2px solid black    
+    padding: 20px
+    &:not(:last-child)
+        margin-right: 60px  
+    img
+        width: 70px 
+    h3
+        margin: 20px 0 10px 0   
+    p
+        font-size: 16px
+        line-height: 23px    
+
+@media screen and (max-width: 1150px)
+    .whync 
+        padding: 50px 0 50px 0
+    .whync-heading p
+        margin-top: 15px    
+
+    .whync-cards
+        margin-top: 50px
+        // flex-direction: column
+
+    .whync-card
+        padding: 15px
+        &:not(:last-child)
+            margin-right: 30px
+            // margin-bottom: 30px 
+        img
+            width: 40px 
+        h3
+            margin: 20px 0 10px 0   
+
+@media screen and (max-width: 720px)
+    .whync-heading p
+        margin-top: 10px    
+
+    .whync-cards
+        margin-top: 30px
+        flex-direction: column
+
+    .whync-card
+        &:not(:last-child)
+            margin-right: 0
+            margin-bottom: 30px
+
+// Pricing    
+.pricing
+    padding: 66px 0 80px 0
+    background-color: $yellow
+    height: 1050px
+
+.pricing-heading
+    text-align: center
+    p
+        margin-top: 20px    
+
+.pricing-cards
+    margin-top: 95px    
+    display: flex
+    justify-content: center
+
+.pricing-card
+    position: relative
+    &:not(:last-child)
+        margin-right: 80px
+
+.pricing-card-top
+    background-color: white
+    position: relative
+    padding: 40px
+    width: 450px
+    height: 330px
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1)
+    z-index: 5 !important
+    display: grid
+    grid-templates-rows: 1fr 1fr 1fr
+    gap: 20px
+    p
+        font-size: 16px
+        line-height: 23px
+    h2
+        font-size: 50px
+        line-height: 50px
+    span
+        font-size: 16px
+        line-height: 23px
+    .cta
+        text-align: center        
+
+.pricing-card-bottom
+    background-color: white
+    border: 2px solid $orange            
+    padding: 40px
+    z-index: 1
+    position: absolute
+    top: 200px
+    left: 30px
+    height: 480px
+    width: 450px
+    display: flex
+    align-items: flex-end
+    li::before
+        content: url('assets/check-icon.png')
+    li        
+        font-size: 23px
+        margin-top: 17px
+        display: flex
+       
+@media screen and (max-width: 1150px)
+    .pricing 
+        padding: 50px 0 50px 0
+        height: 780px
+
+    .pricing-heading p
+        margin-top: 15px    
+
+    .pricing-cards
+        margin-top: 50px    
+
+    .pricing-card:not(:last-child)
+        margin-right: 30px
+
+    .pricing-card-top
+        padding: 20px
+        width: 350px
+        height: 250px
+        gap: 15px
+        h2
+            font-size: 40px
+            line-height: 40px
+        h4
+            font-size: 24px
+            line-height: 30px        
+
+    .pricing-card-bottom
+        padding: 20px
+        height: 345px
+        width: 350px
+        left: 10px            
+        li        
+            font-size: 18px
+            margin-top: 15px
+
+@media screen and (max-width: 720px)
+    .pricing 
+        height: 1370px
+
+    .pricing-heading p
+        margin-top: 10px    
+
+    .pricing-cards
+        flex-direction: column
+        margin-top: 30px  
+
+    .pricing-card:not(:last-child)
+        margin-right: 0
+        margin-bottom: 330px
+
+    .pricing-card-top
+        height: 260px
+        gap: 17px
+
+    .pricing-card-bottom
+        left: 10px            
+
+// Team
+.team
+    padding: 66px 0 80px 0
+    background-image: url('assets/pattern-team.png')
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center center
+    width: 100%
+    .container
+        display: flex
+
+.team-heading
+    width: 30%
+    margin-right: 80px
+    p
+        margin-top: 17px
+
+.team-members
+    width: 70%
+    display: grid
+    grid-template-areas: "griff ." "brenden thu"
+    gap: 30px
+    row-gap: 30px
+
+.griff
+    grid-area: griff
+.brenden
+    grid-area: brenden
+.thu
+    grid-area: thu
+
+.team-member
+    cursor: pointer
+    .team-img
+        box-shadow: 10px 10px $green    
+        border: 2px solid black     
+    h4
+        margin: 15px 0 5px 0      
+
+// Overlay
+.team img
+    display: block
+.hover-container
+    position: relative
+.overlay
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    height: 100%
+    opacity: 0
+    transition: 0.5s ease
+    background-color: rgba(0, 0, 0, 0.7)
+    display: flex
+    justify-content: center
+    align-items: center
+.socials-team
+    display: flex 
+   
+.linkedin-white
+    margin-right: 36px
+    
+.linkedin-white,
+.github-white
+    &:hover
+        filter: invert(0.33) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(0.99)
+        transition: all 0.5s ease
+.hover-container:hover 
+    .overlay
+        opacity: 1    
+    // .team-img    
+    //     box-shadow: none
+    //     transition: all 0.5s ease
+
+@media screen and (max-width: 1150px)
+    .team 
+        padding: 50px 0 50px 0
+
+    .team-heading
+        margin-right: 50px
+        p
+            margin-top: 15px
+
+    .team-members
+        gap: 30px
+        row-gap: 30px
+
+    .team-member h4
+        margin: 15px 0 0 0      
+        font-size: 24px
+        line-height: 30px   
+
+    .linkedin-white
+        margin-right: 20px
+
+@media screen and (max-width: 720px)
+    .team .container
+        flex-direction: column
+
+    .team-heading
+        width: 100%
+        text-align: center
+        margin-right: 0
+        margin-bottom: 30px
+        p
+            margin-top: 10px
+
+    .team-members
+        grid-template-areas: "griff" "brenden" "thu"
+        width: 100%
+
+    .team-member 
+        text-align: center 
+
+// Contact
+#contact 
+    background-color: $yellow
+    padding: 66px 0 80px 0
+    text-align: center    
+    p
+        margin: 20px 0 95px 0   
+
+.contact-form input,
+textarea,
+select
+    justify-content: center
+    align-items: center
+    width: 80%
+    margin-bottom: 32px
+    padding: 15px 20px 
+    border: 2px solid black 
+    border-radius: 0
+    background-color: white 
+    font-family: 'Inconsolata', monospace
+    color: black
+    font-size: 16px
+    line-height: 26px
+    -webkit-appearance: none
+
+textarea:focus, input:focus
+    color: black
+    outline: none
+    border-radius: 0
+    -webkit-appearance: none
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+    -webkit-box-shadow: 0 0 0 30px white inset !important
+    -webkit-text-fill-color: black !important    
+    font-family: 'Inconsolata', monospace!important
+    background-clip: content-box !important
+    -webkit-appearance: none
+
+.contact-form .cta
+    width: 200px
+    cursor: pointer
+    border-radius: 0
+    font-family: 'Inconsolata', monospace
+    padding: 14px 40px
+    border: 2px solid black    
+    font-size: 18px
+    line-height: 26px
+    font-weight: 700
+    background-color: white
+    color: black
+    -webkit-appearance: none
+    &:hover
+        box-shadow: 5px 5px $orange
+        transition: all 0.5s ease
+
+
+@media screen and (max-width: 1150px)
+    #contact
+        padding: 50px 0 50px 0
+        p
+            margin: 15px 0 50px 0   
+
+    .contact-form input,
+    textarea
+        width: 100%
+        margin-bottom: 10px
+        padding: 10px 20px 
+
+    .contact-form .cta
+        width: 100%
+
+@media screen and (max-width: 720px)  
+    #contact p
+        margin: 10px 0 30px 0  
+    #contact .cta
+        padding: 10px
+        font-size: 16px
+        line-height: 18px     
+
+// Footer    
+footer
+    height: 128px
+    position: absolute
+    bottom: 0
+    width: 100%
+    .container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin-top: 50px
+        p
+            font-size: 16px    
+    .socials
+        display: flex
+        justify-content: space-between
+        width: 90px
+        a:hover
+            filter: invert(0.33) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(0.99)
+            transition: all 0.5s ease
+
+@media screen and (max-width: 1150px)
+    main
+        padding: 110px 0 80px 0    
+    footer
+        height: 80px
+        .container
+            margin-top: 26px
+    .socials img
+        width: 32px
+
+@media screen and (max-width: 720px)  
+    main
+        padding-bottom: 150px
+    footer
+        height: 150px
+        .container
+            flex-direction: column-reverse
+            text-align: center
+            margin-top: 30px
+            p
+                width: 100%
+                font-size: 14px
+                margin-top: 20px
+                line-height: 16px
+
+// THANK YOU PAGE
+.thank-you
+    text-align: center
+    padding: 98px 0 128px 0       
+    h1
+        margin-top: 66px
+    p
+        margin: 25px auto 50px auto
+        width: 50ch
+          
+
+@media screen and (max-width: 720px)  
+    .thank-you
+        h1
+            font-size: 30px
+            margin-top: 30px
+        p
+            width: 343px
+            margin: 10px auto 40px auto
+            width: 40ch
