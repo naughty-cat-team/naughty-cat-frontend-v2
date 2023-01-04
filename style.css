@@ -199,31 +199,26 @@ main {
 }
 
 .gradient-text {
-  background-image: linear-gradient(90deg, #7CE04E 0%, rgba(255, 183, 0, 0.9725490196) 25%, #6effa3 50%, #ffb700 75%, #d8e266 100%);
+  --bg-size: 400%;
+  --color-one: #ff8c00;
+  --color-two: #7CE04E;
+  background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0/var(--bg-size) 100%;
+  color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent;
-  background-size: 1000%;
-  background-position: -100%;
-  -webkit-animation: animatedText 12s linear infinite;
-          animation: animatedText 12s linear infinite;
+  -webkit-animation: move-bg 12s infinite linear;
+          animation: move-bg 12s infinite linear;
 }
 
-@-webkit-keyframes animatedText {
-  0% {
-    background-position: -150%;
-  }
-  100% {
-    background-position: 50%;
+@-webkit-keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
   }
 }
 
-@keyframes animatedText {
-  0% {
-    background-position: -150%;
-  }
-  100% {
-    background-position: 50%;
+@keyframes move-bg {
+  to {
+    background-position: var(--bg-size) 0;
   }
 }
 @media screen and (max-width: 1150px) {
