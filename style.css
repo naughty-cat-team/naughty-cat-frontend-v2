@@ -708,6 +708,7 @@ main {
     margin-top: 10px;
   }
   .team-members {
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "griff" "brenden" "thu";
     width: 100%;
   }
