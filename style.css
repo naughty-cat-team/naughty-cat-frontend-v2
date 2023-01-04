@@ -5,10 +5,6 @@
   padding: 0;
 }
 
-html {
-	scroll-behavior: smooth;
-}
-
 body {
   min-height: 100vh;
   font-family: "Inconsolata", monospace;
@@ -202,28 +198,33 @@ main {
 }
 
 .gradient-text {
-
-  --bg-size: 400%;
-  --color-one: #ff8c00;
-  --color-two: #7CE04E;
-  background: linear-gradient(
-                90deg,
-                var(--color-one),
-                var(--color-two),
-                var(--color-one)
-              ) 0 0 / var(--bg-size) 100%;
-  color: transparent;
+  background-image: linear-gradient(90deg, #7CE04E 0%, rgba(255, 183, 0, 0.9725490196) 25%, #6effa3 50%, #ffb700 75%, #d8e266 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  animation: move-bg 12s infinite linear
+  color: transparent;
+  background-size: 1000%;
+  background-position: -100%;
+  -webkit-animation: animatedText 12s linear infinite;
+          animation: animatedText 12s linear infinite;
 }
 
-@keyframes move-bg {
-  to {
-    background-position: var(--bg-size) 0;
+@-webkit-keyframes animatedText {
+  0% {
+    background-position: -150%;
+  }
+  100% {
+    background-position: 50%;
   }
 }
 
+@keyframes animatedText {
+  0% {
+    background-position: -150%;
+  }
+  100% {
+    background-position: 50%;
+  }
+}
 @media screen and (max-width: 1150px) {
   .hero .container {
     background-size: 350px 280px;
@@ -600,8 +601,8 @@ main {
 
 .team-members {
   width: 70%;
-  display: grid;
   grid-template-columns: 1fr 1fr;
+  display: grid;
   grid-template-areas: "griff ." "brenden thu";
   gap: 30px;
   row-gap: 30px;
@@ -708,7 +709,7 @@ main {
     margin-top: 10px;
   }
   .team-members {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas: "griff" "brenden" "thu";
     width: 100%;
   }
@@ -762,6 +763,7 @@ input:-webkit-autofill:active {
 }
 
 .contact-form .cta {
+  width: 200px;
   cursor: pointer;
   border-radius: 0;
   font-family: "Inconsolata", monospace;
