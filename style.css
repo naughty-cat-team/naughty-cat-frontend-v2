@@ -601,6 +601,7 @@ main {
 .team-members {
   width: 70%;
   display: grid;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas: "griff ." "brenden thu";
   gap: 30px;
   row-gap: 30px;
