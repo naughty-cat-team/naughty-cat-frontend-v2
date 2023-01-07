@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&display=swap");
 * {
   box-sizing: border-box;
@@ -142,7 +143,7 @@ header .logo img {
     line-height: 20px;
   }
 }
-@media screen and (max-width: 720px) {
+@media screen and (min-width: 481px) and (max-width: 720px) {
   header .logo img {
     height: 30px;
   }
@@ -172,6 +173,12 @@ header .logo img {
     padding: 10px;
     font-size: 16px;
     line-height: 18px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .container {
+    width: auto;
+    padding: calc(8px + 1.5625vw);
   }
 }
 main {
@@ -245,7 +252,7 @@ main {
     padding: 0;
   }
   .hero .container p {
-    margin: 20px 0 50px 0;
+    margin: 20px auto 50px auto;
     width: 100%;
   }
   .hero-right {
@@ -256,6 +263,18 @@ main {
     width: 100%;
     text-align: center;
     margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .hero .container {
+    background-size: contain;
+    padding-top: 30px;
+  }
+  .hero .container p {
+    max-width: 40ch;
+  }
+  .hero-left h1 {
+    word-spacing: -10px;
   }
 }
 .services {
@@ -407,7 +426,7 @@ main {
 
 @media screen and (max-width: 1150px) {
   .whync {
-    padding: 50px 0 50px 0;
+    padding: 50px 0 80px 0;
   }
   .whync-heading p {
     margin-top: 15px;
@@ -441,6 +460,13 @@ main {
     margin-bottom: 30px;
   }
 }
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .whync-cards,
+.whync-heading {
+    margin-left: calc(8px + 1.5625vw);
+    margin-right: calc(8px + 1.5625vw);
+  }
+}
 .pricing {
   padding: 66px 0 80px 0;
   background-color: #FFF0DE;
@@ -458,6 +484,7 @@ main {
   margin-top: 95px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .pricing-card {
@@ -476,7 +503,7 @@ main {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
   z-index: 5 !important;
   display: grid;
-  grid-templates-rows: 1fr 1fr 1fr;
+  grid-templates-rows: 1fr 1fr 1fr 1fr;
   gap: 20px;
 }
 .pricing-card-top p {
@@ -577,6 +604,31 @@ main {
   }
   .pricing-card-bottom {
     left: 10px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .pricing {
+    height: 1470px;
+  }
+  .pricing-card:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 330px;
+  }
+  .pricing-card-top {
+    height: 310px;
+    width: 300px;
+  }
+  .pricing-card-top h4 {
+    max-width: 11ch;
+  }
+  .pricing-card-bottom {
+    height: 375px;
+    width: 300px;
+    padding: 20px 10px;
+  }
+  .pricing-card-bottom li::before {
+    content: "•";
+    color: #ff8c00;
   }
 }
 .team {
