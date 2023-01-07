@@ -627,7 +627,7 @@ main {
     padding: 20px 10px;
   }
   .pricing-card-bottom li::before {
-    content: "•";
+    content: "✓";
     color: #ff8c00;
   }
 }
