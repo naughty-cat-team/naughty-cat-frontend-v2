@@ -180,6 +180,9 @@ header .logo img {
     width: auto;
     padding: calc(8px + 1.5625vw);
   }
+  .cta {
+    padding: 8px;
+  }
 }
 main {
   padding: 110px 0 128px 0;
@@ -365,6 +368,7 @@ main {
   }
   .service-heading p {
     margin-top: 10px;
+    max-width: 50ch;
   }
   .service-container {
     width: 100%;
@@ -387,6 +391,11 @@ main {
   }
   .service-content {
     margin: 10px 0;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .service {
+    height: auto;
   }
 }
 .whync {
@@ -449,7 +458,8 @@ main {
 }
 @media screen and (max-width: 720px) {
   .whync-heading p {
-    margin-top: 10px;
+    margin: 10px auto 0 auto;
+    max-width: 50ch;
   }
   .whync-cards {
     margin-top: 30px;
@@ -588,7 +598,8 @@ main {
     height: 1370px;
   }
   .pricing-heading p {
-    margin-top: 10px;
+    margin: 10px auto 0 auto;
+    max-width: 50ch;
   }
   .pricing-cards {
     flex-direction: column;
@@ -622,7 +633,7 @@ main {
     max-width: 11ch;
   }
   .pricing-card-bottom {
-    height: 375px;
+    height: 385px;
     width: 300px;
     padding: 20px 10px;
   }
