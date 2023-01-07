@@ -51,6 +51,7 @@ p {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 img {
@@ -332,6 +333,9 @@ main {
   }
 }
 @media screen and (max-width: 720px) {
+  .services {
+    background-image: url("assets/pattern-service-mobile.png");
+  }
   .services .container {
     flex-direction: column;
   }
@@ -594,6 +598,13 @@ main {
 .team-heading p {
   margin-top: 17px;
 }
+.team-heading i {
+  display: inline;
+}
+
+.location {
+  margin: auto;
+}
 
 .team-members {
   width: 70%;
@@ -692,6 +703,9 @@ main {
   }
 }
 @media screen and (max-width: 720px) {
+  .team {
+    background-image: url("assets/pattern-team-mobile.png");
+  }
   .team .container {
     flex-direction: column;
   }
@@ -719,7 +733,7 @@ main {
   text-align: center;
 }
 #contact p {
-  margin: 20px 0 95px 0;
+  margin: 20px 0 70px 0;
 }
 
 .contact-form input,
@@ -728,7 +742,7 @@ select {
   justify-content: center;
   align-items: center;
   width: 80%;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   padding: 15px 20px;
   border: 2px solid black;
   border-radius: 0;
@@ -758,8 +772,15 @@ input:-webkit-autofill:active {
   -webkit-appearance: none;
 }
 
+label {
+  text-align: left;
+  margin-bottom: 10px;
+  display: inline-block;
+  font-weight: 700;
+  width: 80%;
+}
+
 .contact-form .cta {
-  width: 200px;
   cursor: pointer;
   border-radius: 0;
   font-family: "Inconsolata", monospace;
@@ -787,10 +808,11 @@ input:-webkit-autofill:active {
   .contact-form input,
 textarea {
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 10px 20px;
   }
-  .contact-form .cta {
+  .contact-form .cta,
+label {
     width: 100%;
   }
 }

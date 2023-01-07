@@ -18,7 +18,10 @@
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -26,7 +29,14 @@
       href="./assets/favicon.svg"
     />
     <meta property="og:title" content="Naughty Cat" />
-    <meta property="og:description" content="Web Design & Development" />
+    <meta
+      property="og:description"
+      content="Web Design & Development in Madison, WI. We design and develop mobile-friendly websites for small businesses. Easy to navigate but impossible to ignore. Work with us."
+    />
+    <meta
+      name="keywords"
+      content="web design, web development, graphic design, web developer, web design in madison, web developer in madison"
+    />
     <meta property="og:image" content="./assets/preview.jpg" />
     <link rel="stylesheet" href="./style.css" />
 
@@ -247,6 +257,17 @@
           <div class="team-heading">
             <h2>Our team</h2>
             <p>Meet the cats behind the magic.</p>
+            <p>
+              <i style="font-size: 20px" class="fa">&#xf041;</i>
+              <a
+                href=""
+                class="typewrite"
+                data-period="2000"
+                data-type='[ "Madison, WI.", "Madison, WI.", "Madison, WI." ]'
+              >
+                <span class="wrap"></span>
+              </a>
+            </p>
           </div>
 
           <div class="team-members">
@@ -352,28 +373,35 @@
               data-netlify="true"
               name="contact"
             >
+              <label for="name">Name <span style="color: red">*</span></label>
               <input
                 type="text"
                 id="name"
                 name="name"
-                placeholder="Name*"
+                placeholder="Cheshire"
                 required
               />
+              <label for="email">Email <span style="color: red">*</span></label>
+
               <input
                 type="email"
                 id="email"
                 name="email"
-                placeholder="Email*"
+                placeholder="cheshire@wonderland.com"
                 required
               />
+
+              <label for="message"
+                >Message <span style="color: red">*</span></label
+              >
+
               <textarea
                 id="message"
                 name="message"
                 rows="4"
-                placeholder="Message*"
+                placeholder="'I like what I get' is the same thing as 'I get what I like'."
                 required
-              ></textarea
-              ><br />
+              ></textarea>
               <input
                 type="submit"
                 id="submit"
@@ -400,6 +428,6 @@
         </div>
       </div>
     </footer>
-    <!-- <script src="./script.js"></script> -->
+    <script src="./script.js"></script>
   </body>
 </html>

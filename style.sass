@@ -48,6 +48,7 @@ p
 
 a
     text-decoration: none
+    color: black
 
 img
     max-width: 100%
@@ -279,8 +280,10 @@ main
         margin: 0 20px
 
 @media screen and (max-width: 720px)  
-    .services .container
-        flex-direction: column
+    .services 
+        background-image: url('assets/pattern-service-mobile.png')
+        .container
+            flex-direction: column
     .service-heading
         width: 100%
         margin-right: 0
@@ -503,6 +506,10 @@ main
     margin-right: 80px
     p
         margin-top: 17px
+    i
+        display: inline
+.location
+    margin: auto
 
 .team-members
     width: 70%
@@ -559,9 +566,6 @@ main
 .hover-container:hover 
     .overlay
         opacity: 1    
-    // .team-img    
-    //     box-shadow: none
-    //     transition: all 0.5s ease
 
 @media screen and (max-width: 1150px)
     .team 
@@ -585,8 +589,10 @@ main
         margin-right: 20px
 
 @media screen and (max-width: 720px)
-    .team .container
-        flex-direction: column
+    .team 
+        background-image: url('assets/pattern-team-mobile.png')
+        .container
+            flex-direction: column
 
     .team-heading
         width: 100%
@@ -610,7 +616,7 @@ main
     padding: 66px 0 80px 0
     text-align: center    
     p
-        margin: 20px 0 95px 0   
+        margin: 20px 0 70px 0  
 
 .contact-form input,
 textarea,
@@ -618,7 +624,7 @@ select
     justify-content: center
     align-items: center
     width: 80%
-    margin-bottom: 32px
+    margin-bottom: 30px
     padding: 15px 20px 
     border: 2px solid black 
     border-radius: 0
@@ -645,8 +651,14 @@ input:-webkit-autofill:active
     background-clip: content-box !important
     -webkit-appearance: none
 
+label
+    text-align: left
+    margin-bottom: 10px
+    display: inline-block
+    font-weight: 700
+    width: 80%
+
 .contact-form .cta
-    width: 200px
     cursor: pointer
     border-radius: 0
     font-family: 'Inconsolata', monospace
@@ -672,10 +684,11 @@ input:-webkit-autofill:active
     .contact-form input,
     textarea
         width: 100%
-        margin-bottom: 10px
+        margin-bottom: 20px
         padding: 10px 20px 
 
-    .contact-form .cta
+    .contact-form .cta,
+    label
         width: 100%
 
 @media screen and (max-width: 720px)  
