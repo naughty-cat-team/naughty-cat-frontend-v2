@@ -142,7 +142,7 @@ header .logo img {
     line-height: 20px;
   }
 }
-@media screen and (min-width: 481px) and (max-width: 720px) {
+@media screen and (max-width: 720px) {
   header .logo img {
     height: 30px;
   }
@@ -181,6 +181,9 @@ header .logo img {
   }
   .cta {
     padding: 8px;
+  }
+  header .container {
+    margin-top: 0;
   }
 }
 main {
@@ -259,7 +262,8 @@ main {
   }
   .hero-right {
     display: block;
-    width: 100%;
+    margin-left: calc(8px + 1.5625vw);
+    margin-right: calc(8px + 1.5625vw);
   }
   .hero-left {
     width: 100%;
@@ -270,13 +274,15 @@ main {
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .hero .container {
     background-size: contain;
-    padding-top: 30px;
   }
   .hero .container p {
     max-width: 40ch;
   }
   .hero-left h1 {
     word-spacing: -10px;
+  }
+  .hero-left .cta {
+    display: none;
   }
 }
 .services {
