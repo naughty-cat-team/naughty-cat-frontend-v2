@@ -837,3 +837,61 @@ footer
             width: 343px
             margin: 10px auto 40px auto
             width: 40ch
+
+
+// Scroll animations    
+
+// Styling scrollable elements
+
+.js-scroll 
+  opacity: 0
+  transition: opacity 500ms
+
+.js-scroll.scrolled 
+  opacity: 1
+
+.scrolled.fade-in-bottom 
+  animation: fade-in-bottom 1s ease-in-out both
+
+// .scrolled.fade-in 
+//   animation: fade-in 1s ease-in-out both
+// .scrolled.slide-left 
+//   animation: slide-in-left 1s ease-in-out both
+
+// .scrolled.slide-right 
+//   animation: slide-in-right 1s ease-in-out both
+
+// @keyframes slide-in-left 
+//   0% 
+//     -webkit-transform: translateX(-100px)
+//     transform: translateX(-100px)
+//     opacity: 0
+  
+//   100% 
+//     -webkit-transform: translateX(0)
+//     transform: translateX(0)
+//     opacity: 1
+
+// @keyframes slide-in-right 
+//   0% 
+//     -webkit-transform: translateX(100px)
+//     transform: translateX(100px)
+//     opacity: 0
+  
+//   100% 
+//     -webkit-transform: translateX(0)
+//     transform: translateX(0)
+//     opacity: 1
+
+@keyframes fade-in-bottom 
+  0% 
+    -webkit-transform: translateY(50px)
+    transform: translateY(50px)
+    opacity: 0
+  
+  100% 
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+    opacity: 1
+
+    
