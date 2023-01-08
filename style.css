@@ -278,6 +278,10 @@ main {
   .hero .container p {
     max-width: 40ch;
   }
+  .hero .container h1 {
+    max-width: 20ch;
+    margin: auto;
+  }
   .hero-left h1 {
     word-spacing: -10px;
   }
