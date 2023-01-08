@@ -456,6 +456,8 @@ main
     align-items: flex-end
     li::before
         content: url('assets/check-icon.png')
+        transform: scale(.8)          
+
     li        
         font-size: 23px
         margin-top: 17px
@@ -521,25 +523,55 @@ main
 
 @media screen and (min-width: 320px) and (max-width: 480px) 
     .pricing 
-        height: 1470px
+        height: 1430px
 
     .pricing-card:not(:last-child)
         margin-right: 0
-        margin-bottom: 330px
+        margin-bottom: 50px
 
     .pricing-card-top
-        height: 310px
-        width: 300px
+        height: auto
+        width: 100%
+        // box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1)
+        box-shadow: none
+        border-top: 10px solid $orange
         h4
             max-width: 11ch
 
     .pricing-card-bottom
-        height: 390px
-        width: 300px         
-        padding: 20px 10px
+        position: relative
+        height: auto
+        width: 100%
+        top: 0
+        left: 0         
+        padding: 0 10px 20px 10px
+        border: none
         li::before
-            content: '✓'
-            color: $orange            
+            transform: scale(.5)          
+
+    .pricing-card
+        margin-left: auto
+        margin-right: auto
+
+
+// .pricing-card-bottom
+//     background-color: white
+//     border: 2px solid $orange            
+//     padding: 40px
+//     z-index: 1
+//     position: absolute
+//     top: 200px
+//     left: 30px
+//     height: 480px
+//     width: 450px
+//     display: flex
+//     align-items: flex-end
+//     li::before
+//         content: url('assets/check-icon.png')
+//     li        
+//         font-size: 23px
+//         margin-top: 17px
+//         display: flex
 
 // Team
 .team
