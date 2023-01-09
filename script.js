@@ -40,8 +40,6 @@ window.addEventListener("scroll", () => {
   handleScrollAnimation();
 });
 
-
-
 // ==============Typetext
 // let TxtType = function (el, toRotate, period) {
 //   this.toRotate = toRotate;
@@ -100,7 +98,6 @@ window.addEventListener("scroll", () => {
 //   css.innerHTML = ".typewrite > .wrap { border-right: 1px solid #000}";
 //   document.body.appendChild(css);
 // };
-
 
 // ===========Team swiper
 // let swiper = new Swiper(".mySwiper", {
