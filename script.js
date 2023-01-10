@@ -36,6 +36,11 @@ const handleScrollAnimation = () => {
   });
 };
 
+window.addEventListener("load", () => {
+  handleScrollAnimation();
+});
+
+
 window.addEventListener("scroll", () => {
   handleScrollAnimation();
 });
