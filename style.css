@@ -709,11 +709,8 @@ main {
   box-shadow: 10px 10px #7CE04E;
   border: 2px solid black;
 }
-.team-member p {
-  margin-top: 20px;
-}
-.team-member p span {
-  font-weight: 700;
+.team-member h4 {
+  margin: 20px 0 5px 0;
 }
 
 .team img {
