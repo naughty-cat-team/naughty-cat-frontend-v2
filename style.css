@@ -108,11 +108,6 @@ header .logo img {
 .promo marquee {
   font-size: 14px;
 }
-.promo marquee:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-  cursor: pointer;
-}
 
 .nav-left {
   width: 50%;
