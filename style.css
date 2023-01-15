@@ -188,6 +188,9 @@ header .logo img {
   nav .container {
     padding: 20px calc(8px + 1.5625vw);
   }
+  .promo .container {
+    padding: 7px 0;
+  }
 }
 main {
   padding: 130px 0 128px 0;
@@ -253,11 +256,11 @@ main {
 }
 @media screen and (max-width: 720px) {
   main {
-    padding-top: 20px;
+    padding-top: 50px;
   }
   .hero .container {
     background-image: none;
-    padding: 40px 0 0 0;
+    padding: 50px 0 0 0;
   }
   .hero .container p {
     margin: 20px auto 50px auto;
