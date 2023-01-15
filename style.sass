@@ -161,10 +161,9 @@ header
     nav .cta
         padding: 8px      
     nav .container
-        padding: 20px calc(8px + 1.5625vw)
+        padding: 20px calc(8px + 1.5625vw) !important
     .promo .container
-        padding: 7px 0        
-
+        padding: 7px calc(8px + 1.5625vw)      
 // Hero banner section      
 main
     padding: 130px 0 128px 0       
@@ -231,6 +230,10 @@ main
         margin-bottom: 50px
 
 @media screen and (min-width: 320px) and (max-width: 480px) 
+    .container
+        width: auto
+        padding-left: calc(8px + 1.5625vw)
+        padding-right: calc(8px + 1.5625vw)
     .hero .container
         background-size: contain
         p

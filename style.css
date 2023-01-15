@@ -186,10 +186,10 @@ header .logo img {
     padding: 8px;
   }
   nav .container {
-    padding: 20px calc(8px + 1.5625vw);
+    padding: 20px calc(8px + 1.5625vw) !important;
   }
   .promo .container {
-    padding: 7px 0;
+    padding: 7px calc(8px + 1.5625vw);
   }
 }
 main {
@@ -278,6 +278,11 @@ main {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
+  .container {
+    width: auto;
+    padding-left: calc(8px + 1.5625vw);
+    padding-right: calc(8px + 1.5625vw);
+  }
   .hero .container {
     background-size: contain;
   }
