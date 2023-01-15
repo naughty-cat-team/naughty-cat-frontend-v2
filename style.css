@@ -86,17 +86,27 @@ ul {
 header {
   position: absolute;
   top: 0;
-  height: 100px;
+  height: 130px;
   width: 100%;
 }
-header .container {
-  margin-top: 50px;
+header nav .container {
   display: flex;
   justify-items: space-between;
   align-items: center;
+  padding: 20px 0;
 }
 header .logo img {
   height: 50px;
+}
+
+.promo {
+  background-color: rgba(124, 224, 78, 0.2);
+}
+.promo .container {
+  padding: 10px 0;
+}
+.promo marquee {
+  font-size: 14px;
 }
 
 .nav-left {
@@ -113,9 +123,6 @@ header .logo img {
 @media screen and (max-width: 1150px) {
   header .logo img {
     height: 40px;
-  }
-  header .container {
-    margin-top: 30px;
   }
   .container {
     width: 690px;
@@ -143,11 +150,11 @@ header .logo img {
   }
 }
 @media screen and (max-width: 720px) {
+  header {
+    height: 120px;
+  }
   header .logo img {
     height: 30px;
-  }
-  header .container {
-    margin-top: 15px;
   }
   .container {
     width: 343px;
@@ -175,19 +182,15 @@ header .logo img {
   }
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .container {
-    width: auto;
-    padding: calc(8px + 1.5625vw);
-  }
-  .cta {
+  nav .cta {
     padding: 8px;
   }
-  header .container {
-    margin-top: 0;
+  nav .container {
+    padding: 20px calc(8px + 1.5625vw);
   }
 }
 main {
-  padding: 110px 0 128px 0;
+  padding: 130px 0 128px 0;
 }
 
 .hero .container {
@@ -238,7 +241,7 @@ main {
   .hero .container {
     background-size: 350px 280px;
     background-position: right 0 bottom 0;
-    padding: 30px 0 60px 0;
+    padding: 50px 0 80px 0;
   }
   .hero .container p {
     margin: 20px 0 50px 0;
@@ -250,11 +253,11 @@ main {
 }
 @media screen and (max-width: 720px) {
   main {
-    padding-top: 50px;
+    padding-top: 20px;
   }
   .hero .container {
     background-image: none;
-    padding: 0;
+    padding: 40px 0 0 0;
   }
   .hero .container p {
     margin: 20px auto 50px auto;
