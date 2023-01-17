@@ -105,8 +105,9 @@ header .logo img {
 .promo .container {
   padding: 10px 0;
 }
-.promo marquee {
+.promo p {
   font-size: 14px;
+  text-align: center;
 }
 
 .nav-left {
