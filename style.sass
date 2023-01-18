@@ -72,7 +72,14 @@ ul
     color: black
     &:hover
         box-shadow: 5px 5px $orange
-        transition: all 0.5s ease
+        transition: all 0.5s ease-in-out
+
+.underline 
+    text-decoration: underline $orange 2px
+    font-weight: 700
+    &:hover
+        text-decoration: underline $orange 4px    
+        transition: all .5s ease-in-out    
 
 // Header    
 header
@@ -161,7 +168,7 @@ header
 
 @media screen and (min-width: 320px) and (max-width: 480px)         
     nav .cta
-        padding: 8px      
+        padding: 10px 15px     
     nav .container
         padding: 20px calc(8px + 1.5625vw) !important
     .promo .container
@@ -622,7 +629,7 @@ main
     right: 0
     height: 100%
     opacity: 0
-    transition: 0.5s ease
+    transition: all 0.5s ease-in-out
     background-color: rgba(0, 0, 0, 0.7)
     display: flex
     justify-content: center
@@ -637,7 +644,7 @@ main
 .github-white
     &:hover
         filter: invert(0.33) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(0.99)
-        transition: all 0.5s ease
+        transition: all 0.5s ease-in-out
 .hover-container:hover 
     .overlay
         opacity: 1    
@@ -673,7 +680,7 @@ main
         width: 100%
         text-align: center
         margin-right: 0
-        margin-bottom: 30px
+        margin-bottom: 40px
         p
             margin-top: 10px
 
@@ -747,7 +754,7 @@ label
     -webkit-appearance: none
     &:hover
         box-shadow: 5px 5px $orange
-        transition: all 0.5s ease
+        transition: all 0.5s ease-in-out
 
 
 @media screen and (max-width: 1150px)
@@ -793,7 +800,7 @@ footer
         width: 90px
         a:hover
             filter: invert(0.33) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(0.99)
-            transition: all 0.5s ease
+            transition: all 0.5s ease-in-out
 
 @media screen and (max-width: 1150px)
     main
