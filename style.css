@@ -976,10 +976,10 @@ footer .socials a:hover {
 }
 @media screen and (max-width: 720px) {
   main {
-    padding-bottom: 150px;
+    padding-bottom: 130px;
   }
   footer {
-    height: 150px;
+    height: 130px;
   }
   footer .container {
     flex-direction: column-reverse;
@@ -989,8 +989,10 @@ footer .socials a:hover {
   footer .underline {
     width: 100%;
     font-size: 14px;
-    margin-top: 20px;
     line-height: 16px;
+  }
+  footer .socials {
+    margin-bottom: 10px;
   }
 }
 .thank-you {
