@@ -86,7 +86,7 @@ ul {
 .underline {
   -webkit-text-decoration: underline #ff8c00;
           text-decoration: underline #ff8c00;
-  font-weight: 700;
+  font-weight: 500;
   position: relative;
 }
 .underline::before {
@@ -946,9 +946,6 @@ footer .container {
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
-}
-footer .underline {
-  font-size: 16px;
 }
 footer .socials {
   display: flex;
