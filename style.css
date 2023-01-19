@@ -84,14 +84,25 @@ ul {
 }
 
 .underline {
-  -webkit-text-decoration: underline #ff8c00 2px;
-          text-decoration: underline #ff8c00 2px;
+  -webkit-text-decoration: underline #ff8c00;
+          text-decoration: underline #ff8c00;
   font-weight: 700;
+  position: relative;
 }
-.underline:hover {
-  -webkit-text-decoration: underline #ff8c00 4px;
-          text-decoration: underline #ff8c00 4px;
+.underline::before {
+  content: "";
+  background-color: #FFF0DE;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 0;
+  z-index: -1;
   transition: all 0.5s ease-in-out;
+}
+.underline:hover::before {
+  bottom: 0;
+  height: 100%;
 }
 
 header {
@@ -272,10 +283,10 @@ main {
   }
   .hero .container {
     background-image: none;
-    padding: 50px 0 0 0;
+    padding: 60px 0 0 0;
   }
   .hero .container p {
-    margin: 20px auto 50px auto;
+    margin: 15px auto 40px auto;
     width: 100%;
   }
   .hero-right {
@@ -936,7 +947,7 @@ footer .container {
   align-items: center;
   margin-top: 50px;
 }
-footer .container p {
+footer .underline {
   font-size: 16px;
 }
 footer .socials {
@@ -975,7 +986,7 @@ footer .socials a:hover {
     text-align: center;
     margin-top: 30px;
   }
-  footer .container p {
+  footer .underline {
     width: 100%;
     font-size: 14px;
     margin-top: 20px;

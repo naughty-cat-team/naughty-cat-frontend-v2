@@ -75,11 +75,22 @@ ul
         transition: all 0.5s ease-in-out
 
 .underline 
-    text-decoration: underline $orange 2px
+    text-decoration: underline $orange
     font-weight: 700
-    &:hover
-        text-decoration: underline $orange 4px    
-        transition: all .5s ease-in-out    
+    position: relative
+    &::before 
+        content: ''
+        background-color: $yellow
+        position: absolute
+        left: 0
+        bottom: 3px
+        width: 100%
+        height: 0
+        z-index: -1
+        transition: all .5s ease-in-out
+    &:hover::before 
+        bottom: 0
+        height: 100%     
 
 // Header    
 header
@@ -226,9 +237,9 @@ main
         padding-top: 50px
     .hero .container
         background-image: none
-        padding: 50px 0 0 0
+        padding: 60px 0 0 0
         p
-            margin: 20px auto 50px auto
+            margin: 15px auto 40px auto
             width: 100%
     .hero-right
         display: block
@@ -792,8 +803,8 @@ footer
         justify-content: space-between
         align-items: center
         margin-top: 50px
-        p
-            font-size: 16px    
+    .underline
+        font-size: 16px    
     .socials
         display: flex
         justify-content: space-between
@@ -821,11 +832,11 @@ footer
             flex-direction: column-reverse
             text-align: center
             margin-top: 30px
-            p
-                width: 100%
-                font-size: 14px
-                margin-top: 20px
-                line-height: 16px
+        .underline
+            width: 100%
+            font-size: 14px
+            margin-top: 20px
+            line-height: 16px
 
 // THANK YOU PAGE
 .thank-you
