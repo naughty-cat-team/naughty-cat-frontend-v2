@@ -290,9 +290,8 @@ main {
     width: 100%;
   }
   .hero-right {
-    display: block;
-    margin-left: calc(8px + 1.5625vw);
-    margin-right: calc(8px + 1.5625vw);
+    display: flex;
+    justify-content: center;
   }
   .hero-left {
     width: 100%;
@@ -306,15 +305,16 @@ main {
     padding-left: calc(8px + 1.5625vw);
     padding-right: calc(8px + 1.5625vw);
   }
-  .hero .container {
-    background-size: contain;
-  }
   .hero .container p {
     max-width: 40ch;
   }
+  .hero-right {
+    padding-left: calc(8px + 1.5625vw);
+    padding-right: calc(8px + 1.5625vw);
+  }
   .hero-left h1 {
-    max-width: 20ch;
-    margin: auto;
+    padding-left: calc(8px + 1.5625vw);
+    padding-right: calc(8px + 1.5625vw);
   }
   .hero-left .cta {
     display: none;

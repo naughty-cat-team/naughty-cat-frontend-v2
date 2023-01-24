@@ -242,9 +242,8 @@ main
             margin: 15px auto 40px auto
             width: 100%
     .hero-right
-        display: block
-        margin-left: calc(8px + 1.5625vw)
-        margin-right: calc(8px + 1.5625vw)
+        display: flex
+        justify-content: center
     .hero-left
         width: 100%
         text-align: center
@@ -255,15 +254,15 @@ main
         width: auto
         padding-left: calc(8px + 1.5625vw)
         padding-right: calc(8px + 1.5625vw)
-    .hero .container
-        background-size: contain
-        p
-            max-width: 40ch  
-
+    .hero .container p
+        max-width: 40ch  
+    .hero-right
+        padding-left: calc(8px + 1.5625vw)
+        padding-right: calc(8px + 1.5625vw)
     .hero-left 
         h1
-            max-width: 20ch
-            margin: auto
+            padding-left: calc(8px + 1.5625vw)
+            padding-right: calc(8px + 1.5625vw)
         .cta
             display: none            
 // Services  
