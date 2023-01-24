@@ -309,8 +309,8 @@ main {
     max-width: 40ch;
   }
   .hero-right {
-    padding-left: calc(8px + 1.5625vw);
-    padding-right: calc(8px + 1.5625vw);
+    margin-left: calc(8px + 1.5625vw);
+    margin-right: calc(8px + 1.5625vw);
   }
   .hero-left h1 {
     padding-left: calc(8px + 1.5625vw);
