@@ -53,6 +53,7 @@ a
 img
     max-width: 100%
     display: block
+    loading: lazy
 
 ul
     list-style: none    
@@ -190,7 +191,7 @@ main
     padding: 130px 0 128px 0       
 
 .hero .container
-    background-image: url('assets/griff-hero.jpg')
+    background-image: url('./assets/griff-hero-mobile.webp')
     background-position: right 0 bottom 0
     background-repeat: no-repeat
     background-size: 550px 495px
@@ -576,7 +577,7 @@ main
         box-shadow: 10px 10px $orange  
         z-index: 6
         li::before
-            transform: scale(.5)          
+            transform: scale(.6)          
 
     .pricing-card
         margin-left: auto
@@ -601,8 +602,18 @@ main
         margin-top: 17px
     i
         display: inline
+    span
+        color: $orange
+
 .location
-    margin: auto
+    display: flex
+    margin-top: 15px
+    img
+        height: 100%
+        margin-right: 10px
+    p
+        margin: auto 0    
+
 
 .team-members
     width: 70%
@@ -666,8 +677,6 @@ main
 
     .team-heading
         margin-right: 50px
-        p
-            margin-top: 15px
 
     .team-members
         gap: 30px
@@ -692,13 +701,13 @@ main
         text-align: center
         margin-right: 0
         margin-bottom: 40px
-        p
-            margin-top: 10px
-
+    .location
+        justify-content: center
     .team-members
         grid-template-columns: 1fr
         grid-template-areas: "griff" "brenden" "thu"
-        width: 100%
+        width: auto
+        margin: auto
 
     .team-member 
         text-align: center 

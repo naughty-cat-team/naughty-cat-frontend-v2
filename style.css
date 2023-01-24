@@ -57,6 +57,7 @@ a {
 img {
   max-width: 100%;
   display: block;
+  loading: lazy;
 }
 
 ul {
@@ -220,7 +221,7 @@ main {
 }
 
 .hero .container {
-  background-image: url("assets/griff-hero.jpg");
+  background-image: url("./assets/griff-hero-mobile.webp");
   background-position: right 0 bottom 0;
   background-repeat: no-repeat;
   background-size: 550px 495px;
@@ -681,7 +682,7 @@ main {
     z-index: 6;
   }
   .pricing-card-bottom li::before {
-    transform: scale(0.5);
+    transform: scale(0.6);
   }
   .pricing-card {
     margin-left: auto;
@@ -710,9 +711,20 @@ main {
 .team-heading i {
   display: inline;
 }
+.team-heading span {
+  color: #ff8c00;
+}
 
 .location {
-  margin: auto;
+  display: flex;
+  margin-top: 15px;
+}
+.location img {
+  height: 100%;
+  margin-right: 10px;
+}
+.location p {
+  margin: auto 0;
 }
 
 .team-members {
@@ -795,9 +807,6 @@ main {
   .team-heading {
     margin-right: 50px;
   }
-  .team-heading p {
-    margin-top: 15px;
-  }
   .team-members {
     gap: 30px;
     row-gap: 30px;
@@ -824,13 +833,14 @@ main {
     margin-right: 0;
     margin-bottom: 40px;
   }
-  .team-heading p {
-    margin-top: 10px;
+  .location {
+    justify-content: center;
   }
   .team-members {
     grid-template-columns: 1fr;
     grid-template-areas: "griff" "brenden" "thu";
-    width: 100%;
+    width: auto;
+    margin: auto;
   }
   .team-member {
     text-align: center;
