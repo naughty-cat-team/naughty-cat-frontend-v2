@@ -454,7 +454,7 @@ main {
 .whync-card {
   box-shadow: 10px 10px #7CE04E;
   border: 2px solid black;
-  padding: 20px;
+  padding: 25px 22px;
 }
 .whync-card:not(:last-child) {
   margin-right: 60px;
@@ -538,7 +538,6 @@ main {
 }
 .pricing-card p {
   font-size: 16px;
-  color: #6a6a6a;
   line-height: 18px;
 }
 .pricing-card h3 {
@@ -553,7 +552,7 @@ main {
 }
 .pricing-card .cta {
   position: absolute;
-  bottom: 22px;
+  bottom: 27px;
   border: none;
   margin: 0 40px;
   left: 0;
@@ -580,7 +579,6 @@ main {
 .pricing-card-bottom li {
   font-size: 16px;
   margin-top: 8px;
-  color: #6a6a6a;
   display: flex;
 }
 .pricing-card-bottom span {
