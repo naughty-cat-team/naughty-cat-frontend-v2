@@ -121,17 +121,6 @@ header .logo img {
   height: 50px;
 }
 
-.promo {
-  background-color: rgba(124, 224, 78, 0.2);
-}
-.promo .container {
-  padding: 10px 0;
-}
-.promo p {
-  font-size: 14px;
-  text-align: center;
-}
-
 .nav-left {
   width: 50%;
 }
@@ -224,16 +213,16 @@ main {
   background-position: right 0 bottom 0;
   background-repeat: no-repeat;
   background-size: 550px 495px;
-  padding: 70px 0 110px 0;
+  padding: 50px 0 110px 0;
 }
 .hero .container p {
-  margin: 30px 0 50px 0;
+  margin: 30px 0 60px 0;
   max-width: 40ch;
 }
 
 .hero-left {
   width: 55%;
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
 .hero-right {
@@ -265,13 +254,13 @@ main {
 }
 @media screen and (max-width: 1150px) {
   .hero .container {
-    background-size: 350px 280px;
+    background-size: 350px 300px;
     background-position: right 0 bottom 0;
-    padding: 50px 0 80px 0;
+    padding: 30px 0 70px 0;
   }
   .hero .container p {
     margin: 20px 0 50px 0;
-    max-width: 50ch;
+    max-width: 40ch;
   }
   .hero-left {
     padding-top: 0;
@@ -283,7 +272,7 @@ main {
   }
   .hero .container {
     background-image: none;
-    padding: 60px 0 0 0;
+    padding: 0;
   }
   .hero .container p {
     margin: 15px auto;
