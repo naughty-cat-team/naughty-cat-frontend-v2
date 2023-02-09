@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&display=swap')
     
+
 $orange: #ff8c00
 $green: #7CE04E
 $yellow: #FFF0DE
@@ -25,6 +26,7 @@ h5,
 h6
     color: black
     font-weight: 700
+
 h1
     font-size: 56px
     line-height: 56px
@@ -96,13 +98,13 @@ ul
 header
     position: absolute
     top: 0
-    height: 130px
+    height: 200px
     width: 100%    
     nav .container
         display: flex
         justify-items: space-between
         align-items: center
-        padding: 20px 0
+        padding: 40px 0
     .logo img
         height: 50px
 
@@ -181,13 +183,13 @@ header
     nav .cta
         padding: 10px 15px     
     nav .container
-        padding: 20px calc(8px + 1.5625vw) !important
+        padding: 30px calc(8px + 1.5625vw) !important
     .promo .container
         padding: 7px calc(8px + 1.5625vw)   
 
     // Hero banner section      
 main
-    padding: 130px 0 128px 0       
+    padding: 180px 0 128px 0       
 
 .hero .container
     background-image: url('./assets/griff-hero.webp')
@@ -224,7 +226,7 @@ main
     .hero .container
         background-size: 350px 300px
         background-position: right 0 bottom 0
-        padding: 30px 0 70px 0
+        padding: 50px 0 70px 0
         p
             margin: 20px 0 50px 0
             max-width: 40ch
@@ -237,7 +239,7 @@ main
         padding-top: 50px
     .hero .container
         background-image: none
-        padding: 0
+        padding: 30px 0 0
         p
             margin: 15px auto
             width: 100%
@@ -254,8 +256,10 @@ main
         width: auto
         padding-left: calc(8px + 1.5625vw)
         padding-right: calc(8px + 1.5625vw)
-    .hero .container p
-        max-width: 40ch  
+    .hero .container 
+        padding: 15px 0 0 
+        p
+            max-width: 40ch  
     .hero-left 
         h1
             padding-left: calc(8px + 1.5625vw)
@@ -553,16 +557,6 @@ main
         display: inline
     span
         color: $orange
-
-.location
-    display: flex
-    margin-top: 15px
-    img
-        height: 100%
-        margin-right: 10px
-    p
-        margin: auto 0    
-
 
 .team-members
     width: 70%

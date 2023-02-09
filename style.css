@@ -108,14 +108,14 @@ ul {
 header {
   position: absolute;
   top: 0;
-  height: 130px;
+  height: 200px;
   width: 100%;
 }
 header nav .container {
   display: flex;
   justify-items: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 40px 0;
 }
 header .logo img {
   height: 50px;
@@ -198,14 +198,14 @@ header .logo img {
     padding: 10px 15px;
   }
   nav .container {
-    padding: 20px calc(8px + 1.5625vw) !important;
+    padding: 30px calc(8px + 1.5625vw) !important;
   }
   .promo .container {
     padding: 7px calc(8px + 1.5625vw);
   }
 }
 main {
-  padding: 130px 0 128px 0;
+  padding: 180px 0 128px 0;
 }
 
 .hero .container {
@@ -237,14 +237,7 @@ main {
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-animation: move-bg 12s infinite linear;
-          animation: move-bg 12s infinite linear;
-}
-
-@-webkit-keyframes move-bg {
-  to {
-    background-position: var(--bg-size) 0;
-  }
+  animation: move-bg 12s infinite linear;
 }
 
 @keyframes move-bg {
@@ -256,7 +249,7 @@ main {
   .hero .container {
     background-size: 350px 300px;
     background-position: right 0 bottom 0;
-    padding: 30px 0 70px 0;
+    padding: 50px 0 70px 0;
   }
   .hero .container p {
     margin: 20px 0 50px 0;
@@ -272,7 +265,7 @@ main {
   }
   .hero .container {
     background-image: none;
-    padding: 0;
+    padding: 30px 0 0;
   }
   .hero .container p {
     margin: 15px auto;
@@ -293,6 +286,9 @@ main {
     width: auto;
     padding-left: calc(8px + 1.5625vw);
     padding-right: calc(8px + 1.5625vw);
+  }
+  .hero .container {
+    padding: 15px 0 0;
   }
   .hero .container p {
     max-width: 40ch;
@@ -495,7 +491,7 @@ main {
 }
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .whync-cards,
-.whync-heading {
+  .whync-heading {
     margin-left: calc(8px + 1.5625vw);
     margin-right: calc(8px + 1.5625vw);
   }
@@ -657,18 +653,6 @@ main {
 }
 .team-heading span {
   color: #ff8c00;
-}
-
-.location {
-  display: flex;
-  margin-top: 15px;
-}
-.location img {
-  height: 100%;
-  margin-right: 10px;
-}
-.location p {
-  margin: auto 0;
 }
 
 .team-members {
@@ -869,13 +853,13 @@ label {
     margin: 15px 0 50px 0;
   }
   .contact-form input,
-textarea {
+  textarea {
     width: 100%;
     margin-bottom: 20px;
     padding: 10px 20px;
   }
   .contact-form .cta,
-label {
+  label {
     width: 100%;
   }
 }
@@ -976,19 +960,7 @@ footer .socials a:hover {
 }
 
 .scrolled.fade-in-bottom {
-  -webkit-animation: fade-in-bottom 1s ease-in-out both;
-          animation: fade-in-bottom 1s ease-in-out both;
-}
-
-@-webkit-keyframes fade-in-bottom {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  animation: fade-in-bottom 1s ease-in-out both;
 }
 
 @keyframes fade-in-bottom {
