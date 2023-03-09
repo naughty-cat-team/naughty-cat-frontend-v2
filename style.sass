@@ -1,521 +1,434 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&display=swap')
-    
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=PT+Serif:wght@400;700&display=swap')
 $orange: #ff8c00
 $green: #7CE04E
-$yellow: #FFF0DE
+$darker-green: #298801
+$light-yellow: #FFDE00
+$yellow: #FFD100
+$blue: #40bfff
 $gray: #6a6a6a
-
+$almost-black: #252525
+$almost-white: #f1f1f1
+$peach: #FC7766
 *
     box-sizing: border-box
     margin: 0
     padding: 0
     scroll-behavior: smooth
-
 body
     min-height: 100vh
-    font-family: 'Inconsolata', monospace
+    font-family: 'PT Serif', serif
     position: relative
-    color: black
-    
-h1, 
-h2,
-h3,
-h4,
-h5,
-h6
-    color: black
+    color: $almost-black
+h1, h2, h3, h4, h5, h6
+    color: $almost-black
     font-weight: 700
-
+    font-family: 'Montserrat', sans-serif
 h1
     font-size: 56px
     line-height: 56px
-
 h2
     font-size: 50px
     line-height: 60px
-
 h3
     font-size: 26px
     line-height: 36px    
-
 h4
     font-size: 50px
     line-height: 60px   
-
 p
     font-size: 18px
     line-height: 26px
     font-weight: 400
-
 a
     text-decoration: none
     color: black
-
+    font-family: 'Montserrat', sans-serif
 img
     max-width: 100%
     display: block
-
 ul
     list-style: none    
-
 .container
     max-width: 1110px
     margin: 0 auto
-
 .cta
-    font-family: 'Inconsolata', monospace
+    font-family: 'Montserrat', sans-serif
     padding: 14px 40px
-    border: 2px solid black    
-    font-size: 18px
-    line-height: 26px
     font-weight: 700
-    background-color: white
-    color: black
-    &:hover
-        box-shadow: 5px 5px $orange
-        transition: all 0.5s ease-in-out
-
-.underline 
-    text-decoration: underline $orange
-    font-weight: 500
-    position: relative
-    &::before 
-        content: ''
-        background-color: $yellow
-        position: absolute
-        left: 0
-        bottom: 3px
-        width: 100%
-        height: 0
-        z-index: -1
-        transition: all .5s ease-in-out
-    &:hover::before 
-        bottom: 0
-        height: 100%     
-
+    color: $almost-black
+    border-radius: 5px
+.heading-under
+    background-image: url('./assets/noun-underline-4303795.svg')
+    background-size: 250px 
+    background-repeat: no-repeat
+    padding-bottom: 20px
+@media screen and (max-width: 1150px)  
+    .heading-under
+        background-size: 200px 
+        padding-bottom: 20px
+@media screen and (min-width: 320px) and (max-width: 720px) 
+    .heading-under
+        background-size: 120px 
 // Header    
 header
     position: absolute
     top: 0
-    height: 200px
+    background-color: #40bfff
     width: 100%    
-    nav .container
-        display: flex
-        justify-items: space-between
-        align-items: center
-        padding: 40px 0
-    .logo img
-        height: 50px
-
-// .promo 
-//     background-color: rgb(124, 224, 78, 20%)
-//     .container
-//         padding: 10px 0
-//     p
-//         font-size: 14px  
-//         text-align: center
-
-.nav-left
-    width: 50%
-.nav-right      
-    width: 50%
-    a
-        float: right
-
+header .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 40px
+    padding-bottom: 40px
+.overlay
+    z-index: -1
+.logo img
+    height: 42px
+nav a 
+    font-size: 18px
+    letter-spacing: 1px
+    font-weight: 500
+.close-menu, .open-menu
+    cursor: pointer
+    display: none
+.underline:not(:last-child)
+    margin-right: 15px
+.underline
+    position: relative
+    width: fit-content
+    transition: all 0.5s ease-out
+.underline:hover:after, .underline:active:after, .underline:focus:after
+    content: ""
+    position: absolute
+    width: 100%
+    display: block
+    height: 3px
+    background-color: $almost-black
+    bottom: -5px
+    left: 0
+    right: 0
+    margin-left: auto
+    margin-right: auto
 @media screen and (max-width: 1150px)  
-    header 
-        .logo img
-            height: 40px
     .container
         width: 690px
+    nav a 
+        font-size: 16px
     h1
         font-size: 37px
         line-height: 40px
-
     h2
         font-size: 40px         
         line-height: 40px
     h3
         font-size: 18px         
         line-height: 22px
-
     p
         font-size: 16px
         line-height: 23px        
-
     .cta
         padding: 10px 20px
         font-size: 16px
-        line-height: 20px        
-
+        line-height: 20px   
 @media screen and (max-width: 720px)  
-    header 
-        height: 120px
-        .logo img
-            height: 30px
-    .promo
-
     .container
         width: 343px
-    
+    nav
+        display: none
+    .open-menu
+        display: block
+        z-index: 3
+    .open-menu.active
+        display: none
+    .close-menu, #header-nav
+        display: none
+        z-index: 3 !important
+    #header-nav
+        position: absolute 
+    .close-menu
+        right: 0
+    .overlay
+        height: 0
+        width: 100%
+        position: fixed
+        z-index: 2
+        left: 0
+        top: 0
+        background-color: $blue
+        overflow-x: hidden
+        transition: 0.5s
+    #header-nav.active, .close-menu.active
+        display: block
+        z-index: 2
+    #header-nav.active
+        margin-top: 50vh
+        display: flex
+        flex-direction: column
+        font-size: 40px
     h1
-        font-size: 34px
-        line-height: 34px
-
+        font-size: 30px
+        line-height: 32px
     h2
-        font-size: 36px         
-        line-height: 36px
+        font-size: 26px         
+        line-height: 26px
     h3
         font-size: 18px         
         line-height: 22px
-
     p
         font-size: 16px
         line-height: 23px        
-
     .cta
-        padding: 10px
-        font-size: 16px
-        line-height: 18px     
-
-@media screen and (min-width: 320px) and (max-width: 480px)         
-    nav .cta
-        padding: 10px 15px     
-    nav .container
-        padding: 30px calc(8px + 1.5625vw) !important
-    .promo .container
-        padding: 7px calc(8px + 1.5625vw)   
-
-    // Hero banner section      
-main
-    padding: 180px 0 128px 0       
-
-.hero .container
-    background-image: url('./assets/griff-hero.webp')
-    background-position: right 0 bottom 0
-    background-repeat: no-repeat
-    background-size: 550px 495px
-    padding: 50px 0 110px 0
-    p
-        margin: 30px 0 60px 0
-        max-width: 40ch
-
+        font-size: 14px
+        line-height: 20px     
+// Hero banner       
+#hero
+    background-color: $blue
+#hero .container
+    padding-top: 170px 
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+#hero h1 
+    text-transform: uppercase
+    letter-spacing: 1px
+    max-width: 20ch
+#hero p
+    margin: 20px 0 60px 0
 .hero-left
-    width: 55%
+    background-image: url('./assets/star.png')
+    background-repeat: no-repeat
+    background-position: top right
+    background-size: 25px 35px
+    text-align: center
+    z-index: 1
     padding-top: 50px
-
-.hero-right        
-    display: none
-
-.gradient-text
-    --bg-size: 400%
-    --color-one: #ff8c00
-    --color-two: #7CE04E
-    background: linear-gradient(90deg, var(--color-one), var(--color-two), var(--color-one)) 0 0 / var(--bg-size) 100%
-    color: transparent
-    -webkit-background-clip: text
-    background-clip: text
-    animation: move-bg 12s infinite linear
-
-@keyframes move-bg 
-    to
-        background-position: var(--bg-size) 0
-
+.hero-right img
+    width: 60%
+    margin-left: auto
+    margin-right: auto
 @media screen and (max-width: 1150px)
-    .hero .container
-        background-size: 350px 300px
-        background-position: right 0 bottom 0
-        padding: 50px 0 70px 0
-        p
-            margin: 20px 0 50px 0
-            max-width: 40ch
-
+    #hero .container
+        padding-top: 150px 
+    #hero h1 
+        max-width: 22ch
+        margin-left: auto
+        margin-right: auto
+    #hero p
+        margin: 20px 0 50px 0
     .hero-left
-        padding-top: 0
-
+        padding-top: 40px
+        background-size: 20px 30px
+        background-position: top right 20px
+    .hero-right img
+        width: 80%
 @media screen and (max-width: 720px)  
-    main
-        padding-top: 50px
-    .hero .container
-        background-image: none
-        padding: 30px 0 0
-        p
-            margin: 15px auto
-            width: 100%
-    .hero-right
-        display: flex
-        justify-content: center
+    #hero .container
+        padding-top: 130px
+    #hero p
+        margin: 15px auto
     .hero-left
-        width: 100%
-        text-align: center
-        margin-bottom: 40px 
-
+        margin-bottom: 30px 
+        padding-top: 30px
+        background-size: 15px 20px
+    .hero-right img
+        width: 130%
 @media screen and (min-width: 320px) and (max-width: 480px) 
     .container
         width: auto
         padding-left: calc(8px + 1.5625vw)
         padding-right: calc(8px + 1.5625vw)
-    .hero .container 
-        padding: 15px 0 0 
-        p
-            max-width: 40ch  
+    #hero p
+        max-width: 40ch  
     .hero-left 
-        h1
-            padding-left: calc(8px + 1.5625vw)
-            padding-right: calc(8px + 1.5625vw)
-        .cta
-            display: none        
-                
+        padding-top: 25px
+        background-size: 18px 24px
 // Services  
-.services 
-    padding: 66px 0 35px 0
+#services 
+    padding: 80px 0 
     background-color: $yellow
-    background-image: url('assets/pattern-service.png')
-    background-repeat: no-repeat
-    background-size: contain
-    background-position: center center
     width: 100%
-    .container
-        display: flex
-.service-heading
-    width: 35%
-    margin-right: 80px
-    p
-        margin-top: 20px
-
-.service-container
-    width: 65%
-
-.service
-    background-color: white
-    margin-bottom: 45px  
+#services .container
     display: flex
     align-items: center
-    justify-content: left
-    border: 2px solid black    
-    box-shadow: 10px 10px $orange
-    height: 230px
-    img
-        margin-left: 50px
-    p
-        margin-top: 10px 
-        font-size: 16px
-        line-height: 23px    
-
-.service-content
-    margin: 0 35px 0 50px
-
-
+    justify-content: space-between
+.service-heading
+    width: 45%
+    margin-right: 80px
+.service-heading .heading-under
+    background-position: bottom -110px right 110px
+.service-container
+    width: 55%
+.service:not(:last-child)
+    margin-bottom: 45px  
+.service-title
+    display: flex
+    align-items: center
+.service h3 
+    font-size: 40px
+    max-width: 10ch
+    text-transform: uppercase
+    margin-left: 20px
+.number
+    font-size: 77px
+    font-family: 'Montserrat', sans-serif
+    font-weight: 700
+.service p
+    margin-top: 10px 
+    line-height: 23px    
 @media screen and (max-width: 1150px)
-    .services 
-        padding: 50px 0 40px 0
-    .service-heading
-        width: 35%
-        margin-right: 40px
-        p
-            margin-top: 15px
-
-    .service
-        margin-bottom: 30px  
-        height: 220px
-        img
-            width: 40px
-            height: 40px
-            margin-left: 20px
-
-    .service-content
-        margin: 0 20px
-
-@media screen and (max-width: 720px)  
-    .services 
-        background-image: url('assets/pattern-service-mobile.png')
-        .container
-            flex-direction: column
+    #services 
+        padding: 100px 0 
+    #services .container
+        flex-direction: column
     .service-heading
         width: 100%
         margin-right: 0
-        text-align: center
-        p
-            margin: 10px auto 0 auto
-            max-width: 40ch
-
+        margin-bottom: 70px
+    .service-heading .heading-under
+        background-position: bottom -90px left 70px
     .service-container
         width: 100%
-        margin-top: 30px
-    .service
-        margin-bottom: 30px  
-        padding: 70px 15px 15px 15px
-        height: 275px
-        flex-direction: column
-        align-items: left
-        justify-content: left
-        position: relative
-        img
-            margin: 0 
-            position: absolute
-            top: 20px
-            left: 15px
-    .service-content
-        margin: 10px 0 
-
-@media screen and (min-width: 320px) and (max-width: 480px) 
-    .services 
-        padding-bottom: 23px
-    .service
-        height: auto
-
+    .service:not(:last-child)
+        margin-bottom: 50px  
+    .service h3, .number
+        line-height: 35px
+    .service p 
+        max-width: 60ch
+@media screen and (max-width: 720px)  
+    .service-heading
+        margin-bottom: 80px
+@media screen and (min-width: 320px) and (max-width: 720px) 
+    #services 
+        padding: 70px 0 
+    .service h3 
+        font-size: 20px
+        line-height: 20px
+        margin-left: 10px
+    .service-heading .heading-under
+        background-position: bottom -50px left 50px
+    .number
+        font-size: 50px
+        line-height: 50px
 // Why NC
-.whync
-    padding: 66px 0 80px 0
+#whync
+    padding: 100px 0 150px
     text-align: center
-
+    background-color: $peach
 .whync-heading p
     margin-top: 20px    
-
-.whync-cards
+.whync-cards, .whync-card
     display: flex
+.whync-cards
     justify-content: space-between
-    margin-top: 95px
-    text-align: left
-
+    margin-top: 120px
 .whync-card
-    box-shadow: 10px 10px $green    
-    border: 2px solid black    
-    padding: 25px 22px
-    &:not(:last-child)
-        margin-right: 60px  
-    h3
-        margin: 20px 0 10px 0   
-    p
-        font-size: 16px
-        line-height: 23px    
-
+    text-align: center
+    flex-direction: column
+    align-items: center
+.whync-card:not(:last-child)
+    margin-right: 30px  
+.whync-card h3
+    margin: 48px 0 16px 0  
+    font-size: 18px
+    line-height: 26px
 @media screen and (max-width: 1150px)
-    .whync 
-        padding: 50px 0 70px 0
+    #whync 
+        padding: 100px 0
     .whync-heading p
         margin-top: 15px    
-
     .whync-cards
         margin-top: 50px
-
-    .whync-card
-        padding:  20px 15px
-        &:not(:last-child)
-            margin-right: 30px
-        img
-            width: 40px 
-        h3
-            margin: 20px 0 10px 0   
-
+        flex-direction: column
+    .whync-card:not(:last-child)
+        margin-right: 0
+        margin-bottom: 80px  
+    .whync-card img
+        width: 50px 
+    .whync-card h3
+        margin: 20px 0 10px 0  
+    .whync-card p 
+        max-width: 60ch
 @media screen and (max-width: 720px)
+    #whync 
+        padding: 70px 0
     .whync-heading p
         margin: 10px auto 0 auto
         max-width: 40ch
-
-    .whync-cards
-        margin-top: 30px
-        flex-direction: column
-
-    .whync-card
-        &:not(:last-child)
-            margin-right: 0
-            margin-bottom: 30px
-
-@media screen and (min-width: 320px) and (max-width: 480px) 
-    .whync-cards, 
-    .whync-heading 
-        margin-left: calc(8px + 1.5625vw) 
-        margin-right: calc(8px + 1.5625vw) 
-
+    .whync-card:not(:last-child)
+        margin-bottom: 50px  
 // Pricing    
-.pricing
-    padding: 66px 0 80px 0
-    background-color: $yellow
-
+#pricing
+    padding: 80px 0
+    background-color: $blue
 .pricing-heading
     text-align: center
-    p
-        margin-top: 20px    
-
+.pricing-heading p
+    margin-top: 20px    
 .pricing-cards
-    margin-top: 95px    
+    margin-top: 90px    
     display: grid
     grid-template-columns: repeat(3, 1fr)
     gap: 32px
-
 .pricing-card
     background-color: white
-    border: 1px solid lightgray           
     padding: 22px 40px 100px
     position: relative
-    p
-        font-size: 16px
-        line-height: 18px
-    h3
-        font-size: 24px
-        font-weight: 500
-        line-height: 24px
-    h4
-        font-size: 40px   
-        font-weight: 500
-        line-height: 40px
-
-    .cta
-        position: absolute
-        bottom: 27px
-        border: none
-        margin: 0 40px
-        left: 0
-        right: 0
-        width: auto
-        text-align: center
-        font-size: 18px
-        line-height: 18px
-        &:hover
-            box-shadow: 5px 5px black
+    border-radius: 5px
+.pricing-card p
+    font-size: 16px
+    line-height: 18px
+.pricing-card h3
+    font-size: 20px
+    font-weight: 500
+    line-height: 24px
+.pricing-card h4
+    font-size: 40px   
+    font-weight: 500
+    line-height: 40px
+.pricing-card .cta
+    position: absolute
+    bottom: 27px
+    border: none
+    left: 0
+    right: 0
+    width: 70%
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    font-size: 16px
+    line-height: 18px
+    text-transform: uppercase
+.pricing-card .cta:hover
+    opacity: 0.7
 .pricing-card-top
     text-align: center
-    h4
-        margin: 30px 0 10px 0
-    p
-        margin-bottom: 30px
-
-.pricing-card-bottom
-    li        
-        font-size: 16px
-        margin-top: 8px
-        display: flex
-    span
-        color: lightgray
-        margin-right: 10px  
-        font-size: 18px  
-
-.basic
-    border-top: 8px solid lightgray
-    .cta
-        background-color: lightgray   
-.add-on
-    border-top: 8px solid $orange
-    .cta
-        background-color: $orange  
-    span
-        font-size: 16px  
-        line-height: 16px    
+.pricing-card-top h4
+    margin: 30px 0 10px 0
+.pricing-card-top p
+    margin-bottom: 30px
+.pricing-card-bottom li        
+    font-size: 16px
+    margin-top: 8px
+    display: flex
+.pricing-card-bottom span
+    color: lightgray
+    margin-right: 10px  
+.basic, .add-on
+    border-top: 8px solid $almost-black
+.basic .cta, .add-on .cta, .optimal .cta
+    background-color: $yellow
 .optimal
-    border-top: 8px solid $green
-    .cta
-        background-color: $green 
-
-       
+    border-top: 8px solid $almost-black
+.add-on span
+    font-size: 14px  
+    line-height: 16px    
 @media screen and (max-width: 1150px)
-    .pricing 
-        padding: 50px 0 50px 0
-
+    #pricing 
+        padding: 100px 0 
     .pricing-heading p
         margin-top: 15px    
-
     .pricing-cards
         padding-top: 50px  
         grid-template-columns: repeat(1, 1fr)
@@ -523,71 +436,52 @@ main
         margin: 0 auto
     .pricing-card
         padding: 22px 40px 100px
-        
-
 @media screen and (max-width: 720px)
+    #pricing 
+        padding: 70px 0 
     .pricing-heading p
         margin: 10px auto 0 auto    
         max-width: 40ch
-
     .pricing-cards
         width: 100%
-        .cta
-            font-size: 16px
-
+    .pricing-cards .cta
+        font-size: 14px
     .pricing-card
         padding: 22px 30px 100px
-
 // Team
-.team
-    padding: 66px 0 80px 0
-    background-image: url('assets/pattern-team.png')
-    background-repeat: no-repeat
-    background-size: contain
-    background-position: center center
+#team
+    padding: 80px 0
     width: 100%
-    .container
-        display: flex
-
+    background-color: $yellow
+#team .container
+    display: flex
 .team-heading
-    width: 30%
-    margin-right: 80px
-    p
-        margin-top: 17px
-    i
-        display: inline
-    span
-        color: $orange
-
+    width: 40%
+    margin-right: 40px
+.team-heading p
+    margin-top: 17px
 .team-members
-    width: 70%
+    width: 60%
     grid-template-columns: 1fr 1fr
     display: grid
     grid-template-areas: "griff ." "brenden thu"
     gap: 30px
     row-gap: 30px
-
 .griff
     grid-area: griff
 .brenden
     grid-area: brenden
 .thu
     grid-area: thu
-
-.team-member
-    cursor: pointer
-    .team-img
-        box-shadow: 10px 10px $green    
-        border: 2px solid black     
-    h3
-        margin: 20px 0 5px 0      
-
+.team-member img
+    border-radius: 5px
+.team-member h3
+    margin: 20px 0 5px 0      
 // Overlay
-.team img
-    display: block
 .hover-container
     position: relative
-.overlay
+.team-overlay
+    cursor: pointer
     position: absolute
     top: 0
     bottom: 0
@@ -595,241 +489,217 @@ main
     right: 0
     height: 100%
     opacity: 0
-    transition: all 0.5s ease-in-out
+    transition: all 0.3s ease-in-out
     background-color: rgba(0, 0, 0, 0.7)
     display: flex
     justify-content: center
     align-items: center
+    border-radius: 5px
 .socials-team
     display: flex 
-   
 .linkedin-white
     margin-right: 36px
-    
-.linkedin-white,
-.github-white
-    &:hover
-        filter: invert(0.33) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(0.99)
-        transition: all 0.5s ease-in-out
-.hover-container:hover 
-    .overlay
-        opacity: 1    
-
+.linkedin-white, .github-white
+    transition: all 0.3s ease-in-out
+    &:hover svg path
+        fill: $orange
+.hover-container:hover .team-overlay
+    opacity: 1    
 @media screen and (max-width: 1150px)
-    .team 
-        padding: 50px 0 40px 0
-
+    #team 
+        padding: 100px 0
     .team-heading
         margin-right: 50px
-
     .team-members
-        gap: 30px
         row-gap: 30px
-
     .team-member h4
         margin: 15px 0 0 0      
         font-size: 24px
         line-height: 30px   
-
     .linkedin-white
         margin-right: 20px
-
 @media screen and (max-width: 720px)
-    .team 
-        background-image: url('assets/pattern-team-mobile.png')
-        .container
-            flex-direction: column
-
+    #team 
+        padding: 70px 0
+    #team .container
+        flex-direction: column
     .team-heading
         width: 100%
-        text-align: center
         margin-right: 0
         margin-bottom: 40px
-    .location
-        justify-content: center
+        text-align: left
+    .team-heading h2 
+        width: 100%
     .team-members
         grid-template-columns: 1fr
         grid-template-areas: "griff" "brenden" "thu"
         width: auto
         margin: auto
-
     .team-member 
-        text-align: center 
-
+        text-align: left 
 // Contact
 #contact 
-    background-color: $yellow
-    padding: 66px 0 60px 0
-    text-align: center    
-    p
-        margin: 20px 0 70px 0  
-
-.contact-form input,
-textarea,
-select
-    justify-content: center
-    align-items: center
-    width: 80%
+    background-color: $peach
+    padding: 80px 0 180px 0
+#contact h2 
+    margin-bottom: 20px
+    max-width: 8ch
+#contact .container
+    display: flex
+.contact-content
+    width: 45%    
+    margin-right: 80px
+.contact-info
+    margin-top: 50px
+.contact-info p:not(:last-child)
+    margin-bottom: 10px
+.contact-info img
+    max-width: 20px
+    margin-right: 10px
+.contact-info p
+    display: flex
+     align-items: center
+.contact-form
+    width: 55%
+input, textarea
+    -webkit-appearance: none
+    width: 100%
     margin-bottom: 30px
     padding: 15px 20px 
-    border: 2px solid black 
-    border-radius: 0
+    border-radius: 5px
     background-color: white 
-    font-family: 'Inconsolata', monospace
-    color: black
-    font-size: 16px
-    line-height: 26px
-    -webkit-appearance: none
-
+    font-family: 'PT Serif', serif
+    color: $almost-black
+    font-size: 18px
+    line-height: 28px
+    border: none
 textarea:focus, input:focus
-    color: black
-    outline: none
-    border-radius: 0
     -webkit-appearance: none
-
+    color: $almost-black
+    outline: none
+    border-radius: 5px
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active
-    -webkit-box-shadow: 0 0 0 30px white inset !important
-    -webkit-text-fill-color: black !important    
-    font-family: 'Inconsolata', monospace!important
-    background-clip: content-box !important
     -webkit-appearance: none
-
+    -webkit-box-shadow: 0 0 0 30px white inset !important
+    -webkit-text-fill-color: $almost-black !important    
+    font-family: 'PT Serif', serif!important
+    background-clip: content-box !important
 label
-    text-align: left
     margin-bottom: 10px
     display: inline-block
     font-weight: 700
-    width: 80%
-
+    color: $almost-black
+    font-size: 18px
+label span
+    color: $yellow
 .contact-form .cta
+    -webkit-appearance: none
     cursor: pointer
-    border-radius: 0
-    font-family: 'Inconsolata', monospace
-    padding: 14px 40px
-    border: 2px solid black    
+    border-radius: 5px
+    font-family: 'PT Serif', serif
+    padding: 10px 20px
+    border: none   
     font-size: 18px
     line-height: 26px
     font-weight: 700
     background-color: white
     color: black
-    -webkit-appearance: none
+    transition: all 0.3s ease-in-out
+    background-color: $yellow
+    font-family: 'Montserrat', sans-serif
+    font-size: 16px
     &:hover
-        box-shadow: 5px 5px $orange
-        transition: all 0.5s ease-in-out
-
-
+        opacity: 0.7
 @media screen and (max-width: 1150px)
     #contact
-        padding: 50px 0 50px 0
-        p
-            margin: 15px 0 50px 0   
-
-    .contact-form input,
-    textarea
-        width: 100%
-        margin-bottom: 20px
-        padding: 10px 20px 
-
-    .contact-form .cta,
-    label
-        width: 100%
-
-@media screen and (max-width: 720px)  
-    #contact p
-        margin: 10px 0 30px 0  
-    #contact .cta
-        padding: 10px
+        padding: 100px 0 120px 0
+    #contact h3
+        margin-bottom: 15px 
+    input, textarea, label
         font-size: 16px
-        line-height: 18px     
-
+        line-height: 24px
+    .contact-form .cta
+        font-size: 14px
+        line-height: 20px
+@media screen and (max-width: 720px)  
+    #contact
+        padding: 70px 0 180px 0
+    #contact .container
+        flex-direction: column
+    .contact-content, .contact-form
+        width: 100%
+    #contact h2 
+        max-width: 100%
+    .contact-content
+        margin-right: 0
+    .contact-info
+        margin-top: 30px
+        margin-bottom: 50px
+    input, textarea
+        margin-bottom: 20px
 // Footer    
 footer
     height: 128px
     position: absolute
     bottom: 0
     width: 100%
-    .container
-        display: flex
-        justify-content: space-between
-        align-items: center
-        margin-top: 50px
-    .socials
-        display: flex
-        justify-content: space-between
-        width: 90px
-        a:hover
-            filter: invert(0.33) sepia(0.5) saturate(20) hue-rotate(0deg) brightness(0.99)
-            transition: all 0.5s ease-in-out
+    background-color: white
+footer .container, .socials
+    display: flex
+    justify-content: space-between
+footer .container
+    align-items: center
+    margin-top: 50px
+footer a, footer p
+    font-size: 16px
+footer a
+    font-family: 'PT Serif', serif
+    text-decoration: underline
+footer a:hover 
+    color: $orange
+.socials
+    width: 90px
+.socials a:hover svg path
+    fill: $orange
+    transition: all 0.3s ease-in-out
 
 @media screen and (max-width: 1150px)
-    main
-        padding: 110px 0 80px 0    
     footer
         height: 80px
-        .container
-            margin-top: 26px
+    footer .container
+        margin-top: 26px
     .socials img
         width: 32px
-
 @media screen and (max-width: 720px)  
-    main
-        padding-bottom: 150px
     footer
         height: 150px
         .container
             flex-direction: column-reverse
             text-align: center
             margin-top: 40px
-        .underline
-            width: 100%
         .socials
             margin-bottom: 20px            
-
 // THANK YOU PAGE
-.thank-you
+#thank-you 
+    padding-top: 120px
     text-align: center
-    align-items: center   
-    h1
-        margin-top: 66px
-    p
-        margin: 25px auto 50px auto
-        width: 50ch
-          
-
+#thank-you h1
+    margin-top: 120px
+#thank-you p
+    margin: 25px auto 50px auto
+    width: 50ch
+#thank-you .cta
+    background-color: $yellow
+#thank-you .cta:hover
+    opacity: 0.7
 @media screen and (max-width: 720px)  
-    .thank-you
-        h1
-            font-size: 30px
-        p
-            width: 343px
-            margin: 10px auto 40px auto
-            width: 38ch
-
-
-// Styling scrollable elements
-
-.js-scroll 
-  opacity: 0
-  transition: opacity 500ms
-
-.js-scroll.scrolled 
-  opacity: 1
-
-.scrolled.fade-in-bottom 
-  animation: fade-in-bottom 1s ease-in-out both
-
-@keyframes fade-in-bottom 
-  0% 
-    -webkit-transform: translateY(50px)
-    transform: translateY(50px)
-    opacity: 0
-  
-  100% 
-    -webkit-transform: translateY(0)
-    transform: translateY(0)
-    opacity: 1
+    #thank-you h1
+        font-size: 30px
+    #thank-you p
+        margin: 10px auto 40px auto
+        width: 38ch
 
         
