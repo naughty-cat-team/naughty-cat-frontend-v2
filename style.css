@@ -225,8 +225,8 @@ nav a {
     font-size: 40px;
   }
   h1 {
-    font-size: 30px;
-    line-height: 32px;
+    font-size: 40px;
+    line-height: 40px;
   }
   h2 {
     font-size: 26px;
@@ -437,7 +437,7 @@ nav a {
   }
 }
 #whync {
-  padding: 100px 0 150px;
+  padding: 100px 0;
   text-align: center;
   background-color: #FC7766;
 }
@@ -472,9 +472,6 @@ nav a {
 }
 
 @media screen and (max-width: 1150px) {
-  #whync {
-    padding: 100px 0;
-  }
   .whync-heading p {
     margin-top: 15px;
   }
@@ -903,7 +900,7 @@ label span {
 }
 @media screen and (max-width: 720px) {
   #contact {
-    padding: 70px 0 180px 0;
+    padding: 70px 0 200px 0;
   }
   #contact .container {
     flex-direction: column;
