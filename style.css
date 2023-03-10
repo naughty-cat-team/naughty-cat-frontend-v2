@@ -13,19 +13,6 @@ body {
   color: #252525;
 }
 
-html {
-  scroll-snap-type: y mandatory;
-}
-
-html, body, section {
-  block-size: 100%;
-}
-
-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-
 h1, h2, h3, h4, h5, h6 {
   color: #252525;
   font-weight: 700;
@@ -232,7 +219,7 @@ nav a {
     z-index: 2;
   }
   #header-nav.active {
-    margin-top: 90vh;
+    margin-top: 80vh;
     display: flex;
     flex-direction: column;
   }
