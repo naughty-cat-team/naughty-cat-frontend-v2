@@ -16,3 +16,44 @@ function closeNav() {
   closeMenu.classList.remove("active");
   nav.classList.remove("active");
 }
+// Scroll animation
+const scroll = document.querySelectorAll(".scroll");
+
+const elementInView = (el, dividend = 1) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop <=
+    (window.innerHeight || document.documentElement.clientHeight) / dividend
+  );
+};
+
+const elementOutofView = (el) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop > (window.innerHeight || document.documentElement.clientHeight)
+  );
+};
+
+const showScroll = (element) => {
+  element.classList.add("scrolled");
+};
+
+const hideScroll = (element) => {
+  element.classList.remove("scrolled");
+};
+
+const handleScroll = () => {
+  scroll.forEach((el) => {
+    if (elementInView(el, 1.25)) {
+      showScroll(el);
+    } else if (elementOutofView(el)) {
+      hideScroll(el);
+    }
+  });
+};
+
+window.addEventListener("scroll", () => {
+  handleScroll();
+});

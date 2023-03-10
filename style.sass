@@ -64,18 +64,34 @@ ul
     font-weight: 700
     color: $almost-black
     border-radius: 5px
-.heading-under
-    background-image: url('./assets/noun-underline-4303795.svg')
-    background-size: 250px 
-    background-repeat: no-repeat
-    padding-bottom: 20px
-@media screen and (max-width: 1150px)  
-    .heading-under
-        background-size: 200px 
-        padding-bottom: 20px
-@media screen and (min-width: 320px) and (max-width: 720px) 
-    .heading-under
-        background-size: 120px 
+// Animation on scroll
+.scroll 
+    opacity: 0
+    transition: opacity 500ms
+.scroll.scrolled 
+    opacity: 1
+.scrolled.fade-bottom 
+    animation: fade-bottom 1s ease-in-out both
+.scrolled.slide-right 
+    animation: slide-right 1s ease-in-out both
+@keyframes slide-right 
+    0% 
+        -webkit-transform: translateX(100px)
+        transform: translateX(100px)
+        opacity: 0
+    100% 
+        -webkit-transform: translateX(0)
+        transform: translateX(0)
+        opacity: 1
+@keyframes fade-bottom 
+    0% 
+        -webkit-transform: translateY(50px)
+        transform: translateY(50px)
+        opacity: 0
+    100% 
+        -webkit-transform: translateY(0)
+        transform: translateY(0)
+        opacity: 1
 // Header    
 header
     position: absolute
@@ -274,8 +290,6 @@ nav a
 .service-heading
     width: 45%
     margin-right: 80px
-.service-heading .heading-under
-    background-position: bottom -110px right 110px
 .service-container
     width: 55%
 .service:not(:last-child)
@@ -288,10 +302,11 @@ nav a
     max-width: 10ch
     text-transform: uppercase
     margin-left: 20px
+    font-weight: 500
 .number
     font-size: 77px
     font-family: 'Montserrat', sans-serif
-    font-weight: 700
+    font-weight: 500
 .service p
     margin-top: 10px 
     line-height: 23px    
@@ -304,8 +319,6 @@ nav a
         width: 100%
         margin-right: 0
         margin-bottom: 70px
-    .service-heading .heading-under
-        background-position: bottom -90px left 70px
     .service-container
         width: 100%
     .service:not(:last-child)
@@ -324,8 +337,6 @@ nav a
         font-size: 20px
         line-height: 20px
         margin-left: 10px
-    .service-heading .heading-under
-        background-position: bottom -50px left 50px
     .number
         font-size: 50px
         line-height: 50px
