@@ -19,13 +19,6 @@ body
     font-family: 'PT Serif', serif
     position: relative
     color: $almost-black
-// html 
-//     scroll-snap-type: y mandatory
-// html, body, section 
-//     block-size: 100%
-// section
-//     scroll-snap-align: start 
-//     scroll-snap-stop: always
 h1, h2, h3, h4, h5, h6
     color: $almost-black
     font-weight: 700
@@ -186,10 +179,12 @@ nav a
         z-index: 2
     #header-nav.active
         margin-top: 80vh
+        margin-left: 5vw
         display: flex
         flex-direction: column
     #header-nav.active a 
         font-size: 25px
+        font-weight: 700
     #header-nav.active span 
         margin-bottom: 30px
     h1
