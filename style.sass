@@ -105,6 +105,7 @@ nav a
     font-size: 18px
     letter-spacing: 1px
     font-weight: 500
+    padding-bottom: 3px
 .close-menu, .open-menu
     cursor: pointer
     display: none
@@ -112,20 +113,20 @@ nav a
     margin-right: 15px
 .underline
     position: relative
-    width: fit-content
-    transition: all 0.5s ease-out
-.underline:hover:after, .underline:active:after, .underline:focus:after
+.underline:after
     content: ""
     position: absolute
     width: 100%
-    display: block
-    height: 3px
-    background-color: $almost-black
-    bottom: -5px
+    transform: scaleX(0)
+    height: 4px
+    bottom: 0
     left: 0
-    right: 0
-    margin-left: auto
-    margin-right: auto
+    background-color: $almost-black
+    transform-origin: bottom right
+    transition: transform 0.25s ease-out
+.underline:hover:after, .underline:active:after
+    transform: scaleX(1)
+    transform-origin: bottom left
 @media screen and (max-width: 1150px)  
     .container
         width: 690px
@@ -285,6 +286,9 @@ nav a
 .service-heading
     width: 45%
     margin-right: 80px
+.service-heading p 
+    margin-top: 20px    
+    max-width: 35ch
 .service-container
     width: 55%
 .service:not(:last-child)
@@ -314,6 +318,9 @@ nav a
         width: 100%
         margin-right: 0
         margin-bottom: 70px
+    .service-heading p 
+        margin-top: 15px    
+        max-width: 100%
     .service-container
         width: 100%
     .service:not(:last-child)
@@ -328,6 +335,8 @@ nav a
 @media screen and (min-width: 320px) and (max-width: 720px) 
     #services 
         padding: 70px 0 
+    .service-heading p 
+        margin-top: 10px 
     .service h3 
         font-size: 20px
         line-height: 20px
