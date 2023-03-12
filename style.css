@@ -249,7 +249,7 @@ nav a {
     font-size: 25px;
     font-weight: 700;
   }
-  #header-nav.active span {
+  #header-nav.active a {
     margin-bottom: 30px;
   }
   h1 {
